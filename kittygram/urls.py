@@ -2,6 +2,7 @@ from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 
+from tags.views import TagViewSet, CatTagViewSet
 from cats.views import (
     CatViewSet,
     UserViewSet,
@@ -12,7 +13,8 @@ router = DefaultRouter()
 router.register('cats', CatViewSet)
 router.register('users', UserViewSet)
 router.register('achievements', AchievementViewSet)
-
+router.register('tags', TagViewSet)
+router.register('cat-tags', CatTagViewSet, basename='cat-tags')
 
 urlpatterns = [
     path('', include(router.urls)),
