@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt', 
     'cats.apps.CatsConfig',
     'tags.apps.TagsConfig',
+    'favorites.apps.FavoritesConfig',
     'drf_spectacular',
     'djoser',
     'django_filters'
@@ -196,7 +197,7 @@ LOGGING = {
 SPECTACULAR_SETTINGS = {
     'TITLE': 'Kittygram API',
     'DESCRIPTION': (
-        "REST API для управления котами и их достижениями.\n"
+        "REST API для управления котами, их достижениями тегами характера и избранным пользователя.\n"
         "Аутентификация осуществляется через JWT токен.\n"
         "Заголовок:\n"
         "Authorization: Bearer <token>"

@@ -22,27 +22,11 @@ class AssignTagSerializer(serializers.Serializer):
     )
 
     def validate_tags(self, value):
-        if not value:
-            raise serializers.ValidationError("Список тегов пуст")
+        if len(set(value)) != len(value):
+            raise serializers.ValidationError("Дубликаты в запросе")
 
         existing = Tag.objects.filter(id__in=value).count()
-
         if existing != len(value):
             raise serializers.ValidationError("Некоторые теги не существуют")
 
         return value
-
-    def create(self, validated_data):
-        cat = self.context["cat"]
-        tags = validated_data["tags"]
-
-        result = []
-
-        for tag_id in tags:
-            obj, _ = CatTag.objects.get_or_create(
-                cat=cat,
-                tag_id=tag_id
-            )
-            result.append(obj)
-
-        return result

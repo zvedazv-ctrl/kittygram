@@ -1,0 +1,418 @@
+{
+  "info": {
+    "_postman_id": "64d3707d-4a82-490a-a073-3084d2bdc61f",
+    "name": "Tags",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53282902",
+    "_collection_link": "https://go.postman.co/collection/53282902-64d3707d-4a82-490a-a073-3084d2bdc61f?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Get Tag",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/tags/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "tags",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Post Tag",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc3MzAyNzk1LCJpYXQiOjE3NzcyMTYzOTUsImp0aSI6IjNlNjliYTBiOGRhNzQ2NzM4MzVmZWUyYTFkODNjOTEyIiwidXNlcl9pZCI6IjEifQ.bNoMb_I50j-VmrgYgtpXlcFbiV9H73w-M7ztrWT4dhU",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Любопытный\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/tags/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "tags",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Put Tag",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc3MzAyNzk1LCJpYXQiOjE3NzcyMTYzOTUsImp0aSI6IjNlNjliYTBiOGRhNzQ2NzM4MzVmZWUyYTFkODNjOTEyIiwidXNlcl9pZCI6IjEifQ.bNoMb_I50j-VmrgYgtpXlcFbiV9H73w-M7ztrWT4dhU",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Смешной\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/tags/3/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "tags",
+            "3",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Post Cat's Tags",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc3MzAyNzk1LCJpYXQiOjE3NzcyMTYzOTUsImp0aSI6IjNlNjliYTBiOGRhNzQ2NzM4MzVmZWUyYTFkODNjOTEyIiwidXNlcl9pZCI6IjEifQ.bNoMb_I50j-VmrgYgtpXlcFbiV9H73w-M7ztrWT4dhU",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"tags\": [1,2]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/cat-tags/1/assign/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "cat-tags",
+            "1",
+            "assign",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Cat's Tags",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc3MzAyNzk1LCJpYXQiOjE3NzcyMTYzOTUsImp0aSI6IjNlNjliYTBiOGRhNzQ2NzM4MzVmZWUyYTFkODNjOTEyIiwidXNlcl9pZCI6IjEifQ.bNoMb_I50j-VmrgYgtpXlcFbiV9H73w-M7ztrWT4dhU",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/cat-tags/1/cat_tags/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "cat-tags",
+            "1",
+            "cat_tags",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Filter Tag",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/cat-tags/filter_by_tag/?tag=3",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "cat-tags",
+            "filter_by_tag",
+            ""
+          ],
+          "query": [
+            {
+              "key": "tag",
+              "value": "3"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Similar Cat",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/cat-tags/3/similar/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "cat-tags",
+            "3",
+            "similar",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Tag",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc3ODkzMDgzLCJpYXQiOjE3Nzc4MDY2ODMsImp0aSI6ImMzODY1MTdiZmVjMTQ3MzI5OTE2Y2RmNmM0YTAyYmQ5IiwidXNlcl9pZCI6IjEifQ.SZfUPMbtxBlBEBOyQfJioooWBo-k3Oa3B0-tZG9x9qQ",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://127.0.0.1:8000/cat-tags/1/remove/3/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "cat-tags",
+            "1",
+            "remove",
+            "3",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Put Replace Tag",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc3ODkzMDgzLCJpYXQiOjE3Nzc4MDY2ODMsImp0aSI6ImMzODY1MTdiZmVjMTQ3MzI5OTE2Y2RmNmM0YTAyYmQ5IiwidXNlcl9pZCI6IjEifQ.SZfUPMbtxBlBEBOyQfJioooWBo-k3Oa3B0-tZG9x9qQ",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"tags\": [1,2]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/cat-tags/1/replace/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "cat-tags",
+            "1",
+            "replace",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Post favorites",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc3ODkzMDgzLCJpYXQiOjE3Nzc4MDY2ODMsImp0aSI6ImMzODY1MTdiZmVjMTQ3MzI5OTE2Y2RmNmM0YTAyYmQ5IiwidXNlcl9pZCI6IjEifQ.SZfUPMbtxBlBEBOyQfJioooWBo-k3Oa3B0-tZG9x9qQ",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"cat\": 4\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/favorites/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "favorites",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get favorites",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc3ODkzMDgzLCJpYXQiOjE3Nzc4MDY2ODMsImp0aSI6ImMzODY1MTdiZmVjMTQ3MzI5OTE2Y2RmNmM0YTAyYmQ5IiwidXNlcl9pZCI6IjEifQ.SZfUPMbtxBlBEBOyQfJioooWBo-k3Oa3B0-tZG9x9qQ",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://127.0.0.1:8000/favorites/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "favorites",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete favorites",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc3ODkzMDgzLCJpYXQiOjE3Nzc4MDY2ODMsImp0aSI6ImMzODY1MTdiZmVjMTQ3MzI5OTE2Y2RmNmM0YTAyYmQ5IiwidXNlcl9pZCI6IjEifQ.SZfUPMbtxBlBEBOyQfJioooWBo-k3Oa3B0-tZG9x9qQ",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://127.0.0.1:8000/favorites/2/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "favorites",
+            "2",
+            ""
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

@@ -3,6 +3,7 @@ from rest_framework.routers import DefaultRouter
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 
 from tags.views import TagViewSet, CatTagViewSet
+from favorites.views import FavoriteViewSet
 from cats.views import (
     CatViewSet,
     UserViewSet,
@@ -15,6 +16,7 @@ router.register('users', UserViewSet)
 router.register('achievements', AchievementViewSet)
 router.register('tags', TagViewSet)
 router.register('cat-tags', CatTagViewSet, basename='cat-tags')
+router.register('favorites', FavoriteViewSet, basename='favorites')
 
 urlpatterns = [
     path('', include(router.urls)),
